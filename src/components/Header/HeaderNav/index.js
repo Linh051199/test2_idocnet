@@ -1,0 +1,322 @@
+import React from "react";
+import classNames from "classnames/bind";
+
+import styles from "./HeaderNav.module.scss";
+import images from "../../../assets/images";
+
+const cx = classNames.bind(styles);
+
+function HeaderNav() {
+  return (
+    <div className={cx("headerNav__wrapper", "grid")}>
+      <div className={cx("header__body", "grid", "wide")}>
+        <div className={cx("header__menu")}>
+          <div className={cx("header__menuHeader")}>
+            <i class="fa-solid fa-bars"></i>
+            <p>Browse Categories</p>
+            <i class="fa-solid fa-chevron-down" style={{ fontSize: "9px" }}></i>
+          </div>
+
+          <div className={cx("header__menuList")}>
+            <div className={cx("header__menuItem")}>
+              <div className={cx("header__menuItemTitle")}>
+                <img src={images.chair} alt="img" />
+                <p>Chairs</p>
+                <i
+                  class="fa-solid fa-chevron-right"
+                  style={{ fontSize: "12px" }}
+                ></i>
+              </div>
+              <div className={cx("header__menuItemSub")}>
+                <div className={cx("header__menuChair")}>
+                  <div className={cx("header__menuChairHeader")}>
+                    <div className={cx("header__menuChairItem")}>
+                      <img
+                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic1.webp"
+                        alt="img"
+                        width="200px"
+                        height="200px"
+                      />
+                      <span className={cx("header__menuChairItemTitle")}>
+                        fabric Chair
+                      </span>
+                      <p>Wing chairs</p>
+                      <p>Rocking chairs</p>
+                      <p>Kitchen tables parts</p>
+                    </div>
+
+                    <div className={cx("header__menuChairSeparate")}></div>
+
+                    <div className={cx("header__menuChairItem")}>
+                      <img
+                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic2.webp"
+                        alt="img"
+                        width="200px"
+                        height="200px"
+                      />
+                      <span className={cx("header__menuChairItemTitle")}>
+                        HIGH-BACK CHAIRS
+                      </span>
+                      <p>Recliners</p>
+                      <p>Armchairs with footstool</p>
+                      <p>Rattan armchairs</p>
+                    </div>
+
+                    <div className={cx("header__menuChairSeparate")}></div>
+
+                    <div className={cx("header__menuChairItem")}>
+                      <img
+                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic3.webp"
+                        alt="img"
+                        width="200px"
+                        height="200px"
+                      />
+                      <span className={cx("header__menuChairItemTitle")}>
+                        KIDS CHAIRS
+                      </span>
+                      <p>Wing chairs</p>
+                      <p>Rocking chairs</p>
+                      <p>Kids armchairs parts</p>
+                    </div>
+                  </div>
+                  <div className={cx("header__menuChairFooter")}>
+                    <div className={cx("header__menuChairFooterItem")}>
+                      <img src={images.senco} alt="img" />
+                    </div>
+                    <div className={cx("header__menuChairFooterItem")}>
+                      <img src={images.oo} alt="img" />
+                    </div>
+                    <div className={cx("header__menuChairFooterItem")}>
+                      <img src={images.yourstyle} alt="img" />
+                    </div>
+                    <div className={cx("header__menuChairFooterItem")}>
+                      <img src={images.jbe} alt="img" />
+                    </div>
+                    <div className={cx("header__menuChairFooterItem")}>
+                      <img src={images.beddie} alt="img" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={cx("header__menuItem")}>
+              <div className={cx("header__menuItemTitle")}>
+                <img src={images.beds} alt="img" />
+                <p>Beds</p>
+                <i
+                  class="fa-solid fa-chevron-right"
+                  style={{ fontSize: "12px" }}
+                ></i>
+              </div>
+              <div className={cx("header__menuItemSub")}>
+                <div className={cx("header__menuBed")}>
+                  <div className={cx("header__menuBedList")}>
+                    <div className={cx("header__menuBedItem")}>
+                      <p>
+                        <img src={images.beds} alt="img" />
+                        <div>beds</div>
+                      </p>
+                      <span>Single beds</span>
+                      <span>Double beds</span>
+                      <span>Beds parts</span>
+                    </div>
+                    <div className={cx("header__menuBedItem")}>
+                      <p>
+                        <img src={images.beds} alt="img" />
+                        <div> sofa beds</div>
+                      </p>
+                      <span>Chair beds</span>
+                      <span>Corner sofa beds</span>
+                      <span>Sofa bed parts</span>
+                    </div>
+                    <div className={cx("header__menuBedItem")}>
+                      <p>
+                        <img src={images.beds} alt="img" />
+                        <div>guest beds</div>
+                      </p>
+                      <span>Day beds</span>
+                      <span>Stackable beds</span>
+                      <span>Beds with drawers</span>
+                    </div>
+                    <div className={cx("header__menuBedItem")}>
+                      <p>
+                        <img src={images.beds} alt="img" />
+                        <div>kids beds</div>
+                      </p>
+                      <span>Chair beds</span>
+                      <span>Toddler beds</span>
+                      <span>Loft beds</span>
+                    </div>
+                  </div>
+                  <div className={cx("header__menuBedImg")}>
+                    <img
+                      src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/02/befurniturestore2-categories-pic1.webp"
+                      alt="image"
+                      width="400px"
+                      height="100%"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={cx("header__menuItem")}>
+              <div className={cx("header__menuItemTitle")}>
+                <img src={images.lamp} alt="img" />
+                <p>Lamps</p>
+                <i
+                  class="fa-solid fa-chevron-right"
+                  style={{ fontSize: "12px" }}
+                ></i>
+              </div>
+              <div className={cx("header__menuItemSub")}>
+                <div className={cx("header__menuLamp")}>
+                  <div className={cx("header__menuLampList")}>
+                    <div className={cx("header__menuLampItem")}>
+                      <p>
+                        <img src={images.beds} alt="img" />
+                        <div>beds</div>
+                      </p>
+                      <span>Single beds</span>
+                      <span>Double beds</span>
+                      <span>Beds parts</span>
+                    </div>
+                    <div className={cx("header__menuLampItem")}>
+                      <p>
+                        <img src={images.beds} alt="img" />
+                        <div> sofa beds</div>
+                      </p>
+                      <span>Chair beds</span>
+                      <span>Corner sofa beds</span>
+                      <span>Sofa bed parts</span>
+                    </div>
+                    <div className={cx("header__menuLampItem")}>
+                      <p>
+                        <img src={images.beds} alt="img" />
+                        <div>guest beds</div>
+                      </p>
+                      <span>Day beds</span>
+                      <span>Stackable beds</span>
+                      <span>Beds with drawers</span>
+                    </div>
+                    <div className={cx("header__menuLampItem")}>
+                      <p>
+                        <img src={images.beds} alt="img" />
+                        <div>kids beds</div>
+                      </p>
+                      <span>Chair beds</span>
+                      <span>Toddler beds</span>
+                      <span>Loft beds</span>
+                    </div>
+                  </div>
+                  <div className={cx("header__menuLampProduct")}>
+                    <div className={cx("header__menuLampProductItem")}>
+                      <img
+                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic7.webp"
+                        alt="img"
+                        width="84px"
+                        height="84px"
+                      />
+                      <div className={cx("header__menuLampProductItemInfo")}>
+                        <h4>Metal hanging lamps</h4>
+                        <div>
+                          <span>$122.00</span>
+                          <p>$105.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={cx("header__menuLampProductItem")}>
+                      <img
+                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic7.webp"
+                        alt="img"
+                        width="84px"
+                        height="84px"
+                      />
+                      <div className={cx("header__menuLampProductItemInfo")}>
+                        <h4>Metal hanging lamps</h4>
+                        <div>
+                          <span>$122.00</span>
+                          <p>$105.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={cx("header__menuLampProductItem")}>
+                      <img
+                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic7.webp"
+                        alt="img"
+                        width="84px"
+                        height="84px"
+                      />
+                      <div className={cx("header__menuLampProductItemInfo")}>
+                        <h4>Metal hanging lamps</h4>
+                        <div>
+                          <span>$122.00</span>
+                          <p>$105.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={cx("header__menuItem")}>
+              <div className={cx("header__menuItemTitle")}>
+                <img src={images.table} alt="img" />
+                <p>Tables</p>
+                <i
+                  class="fa-solid fa-chevron-right"
+                  style={{ fontSize: "12px" }}
+                ></i>
+              </div>
+            </div>
+
+            <div className={cx("header__menuItem")}>
+              <div className={cx("header__menuItemTitle")}>
+                <img src={images.armchair} alt="img" />
+                <p>Armchairs</p>
+                <i
+                  class="fa-solid fa-chevron-right"
+                  style={{ fontSize: "12px" }}
+                ></i>
+              </div>
+            </div>
+
+            <div className={cx("header__menuItem")}>
+              <div className={cx("header__menuItemTitle")}>
+                <img src={images.cabines} alt="img" />
+                <p>Cabinets</p>
+              </div>
+            </div>
+
+            <div className={cx("header__menuItem")}>
+              <div className={cx("header__menuItemTitle")}>
+                <img src={images.sofas} alt="img" />
+                <p>Sofas</p>
+              </div>
+            </div>
+
+            <div className={cx("header__menuItem")}>
+              <div className={cx("header__menuItemTitle")}>
+                <img src={images.star} alt="img" />
+                <p className={cx("navItemActive")}>Sales</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={cx("header__nav")}>
+          <div className={cx("header__navItem")}>Home</div>
+          <div className={cx("header__navItem", "navItemActive")}>Shop</div>
+          <div className={cx("header__navItem")}>Blog</div>
+          <div className={cx("header__navItem")}>Collections</div>
+          <div className={cx("header__navItem")}>About us</div>
+          <div className={cx("header__navItem")}>Contact</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default HeaderNav;
