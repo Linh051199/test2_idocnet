@@ -162,14 +162,16 @@
 }
 
 .header__menuBed,
-.header__menuLamp {
+.header__menuLamp,
+.header__menuTable {
   display: flex;
   height: 100%;
   width: 100%;
   cursor: default;
 
   .header__menuBedList,
-  .header__menuLampList {
+  .header__menuLampList,
+  .header__menuTableList {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
@@ -177,7 +179,8 @@
     height: 100%;
 
     .header__menuBedItem,
-    .header__menuLampItem {
+    .header__menuLampItem,
+    .header__menuTableItem {
       width: 50%;
       display: flex;
       flex-direction: column;
@@ -192,7 +195,8 @@
   }
 }
 .header__menuBedItem,
-.header__menuLampItem {
+.header__menuLampItem,
+.header__menuTableItem {
   p {
     display: flex;
     margin-bottom: 10px;
@@ -224,10 +228,11 @@
 .header__menuLampProduct {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 400px;
   height: 382px;
+  background-color: #f8f6f5;
 
   .header__menuLampProductItem {
     display: flex;
@@ -235,14 +240,17 @@
     align-items: center;
     padding: 10px 0;
     transition: transform linear 0.2s;
+    padding-left: 30px;
 
     img {
       margin-right: 10px;
+      background-color: #fff;
     }
     .header__menuLampProductItemInfo {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      align-items: flex-start;
       height: 100%;
 
       h4 {
@@ -267,6 +275,24 @@
     &:hover {
       cursor: pointer;
       transform: scale(1.05);
+    }
+  }
+}
+
+.header__menuTable {
+  background-image: url(https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/02/befurniturestore2-megamenu-wrapbg1.webp);
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .header__menuTableList {
+    // .header__menuTableItem {
+    //   // &:first-child {
+    //   //   padding-right: 0;
+    //   // }
+    // }
+    .removePaddingLeft {
+      // padding: 50px 0 0 0;
     }
   }
 }

@@ -175,39 +175,39 @@ function HeaderNav() {
                   <div className={cx("header__menuLampList")}>
                     <div className={cx("header__menuLampItem")}>
                       <p>
-                        <img src={images.beds} alt="img" />
-                        <div>beds</div>
+                        <img src={images.lamp} alt="img" />
+                        <div>ceiling lights</div>
                       </p>
-                      <span>Single beds</span>
-                      <span>Double beds</span>
-                      <span>Beds parts</span>
+                      <span>Pendantas</span>
+                      <span>Ceiling sportlights</span>
+                      <span>Chandeliers</span>
                     </div>
                     <div className={cx("header__menuLampItem")}>
                       <p>
-                        <img src={images.beds} alt="img" />
-                        <div> sofa beds</div>
+                        <img src={images.lamp} alt="img" />
+                        <div> sportlights</div>
                       </p>
-                      <span>Chair beds</span>
-                      <span>Corner sofa beds</span>
-                      <span>Sofa bed parts</span>
+                      <span>Ceiling sportlights</span>
+                      <span>Wall sportlights</span>
+                      <span>Track lighting</span>
                     </div>
                     <div className={cx("header__menuLampItem")}>
                       <p>
-                        <img src={images.beds} alt="img" />
-                        <div>guest beds</div>
+                        <img src={images.lamp} alt="img" />
+                        <div>floor lamps</div>
                       </p>
-                      <span>Day beds</span>
-                      <span>Stackable beds</span>
-                      <span>Beds with drawers</span>
+                      <span>LED floors</span>
+                      <span>Uplighters</span>
+                      <span>Reading lamps</span>
                     </div>
                     <div className={cx("header__menuLampItem")}>
                       <p>
-                        <img src={images.beds} alt="img" />
-                        <div>kids beds</div>
+                        <img src={images.lamp} alt="img" />
+                        <div>desk lamps</div>
                       </p>
-                      <span>Chair beds</span>
-                      <span>Toddler beds</span>
-                      <span>Loft beds</span>
+                      <span>Work lamps</span>
+                      <span>Kid lamps</span>
+                      <span>Clamp lights</span>
                     </div>
                   </div>
                   <div className={cx("header__menuLampProduct")}>
@@ -228,31 +228,31 @@ function HeaderNav() {
                     </div>
                     <div className={cx("header__menuLampProductItem")}>
                       <img
-                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic7.webp"
+                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic8.webp"
                         alt="img"
                         width="84px"
                         height="84px"
                       />
                       <div className={cx("header__menuLampProductItemInfo")}>
-                        <h4>Metal hanging lamps</h4>
+                        <h4>Desk lamp</h4>
                         <div>
-                          <span>$122.00</span>
-                          <p>$105.00</p>
+                          <span>$135.00</span>
+                          <p>$135.00</p>
                         </div>
                       </div>
                     </div>
                     <div className={cx("header__menuLampProductItem")}>
                       <img
-                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic7.webp"
+                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic9.webp"
                         alt="img"
                         width="84px"
                         height="84px"
                       />
                       <div className={cx("header__menuLampProductItemInfo")}>
-                        <h4>Metal hanging lamps</h4>
+                        <h4>Living room lamp</h4>
                         <div>
-                          <span>$122.00</span>
-                          <p>$105.00</p>
+                          <span>$599.00</span>
+                          <p>$450.00</p>
                         </div>
                       </div>
                     </div>
@@ -269,6 +269,45 @@ function HeaderNav() {
                   class="fa-solid fa-chevron-right"
                   style={{ fontSize: "12px" }}
                 ></i>
+              </div>
+              <div className={cx("header__menuItemSub")}>
+                <div className={cx("header__menuTable")}>
+                  <div className={cx("header__menuTableList")}>
+                    <div className={cx("header__menuTableItem")}>
+                      <p>
+                        <img src={images.lamp} alt="img" />
+                        <div>ceiling lights</div>
+                      </p>
+                      <span>Pendantas</span>
+                      <span>Ceiling sportlights</span>
+                      <span>Chandeliers</span>
+                    </div>
+                    <div
+                      className={cx(
+                        "removePaddingLeft",
+                        "header__menuLampItem"
+                      )}
+                    >
+                      <p>
+                        <img src={images.lamp} alt="img" />
+                        <div> sportlights</div>
+                      </p>
+                      <span>Ceiling sportlights</span>
+                      <span>Wall sportlights</span>
+                      <span>Track lighting</span>
+                    </div>
+                    <div className={cx("header__menuLampItem")}>
+                      <p>
+                        <img src={images.lamp} alt="img" />
+                        <div>floor lamps</div>
+                      </p>
+                      <span>LED floors</span>
+                      <span>Uplighters</span>
+                      <span>Reading lamps</span>
+                    </div>
+                  </div>
+                  {/* <div className={cx("header__menuLampProduct")}></div> */}
+                </div>
               </div>
             </div>
 
