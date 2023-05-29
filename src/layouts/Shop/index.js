@@ -10,6 +10,7 @@ import ShopItem from "./ShopItem";
 import HeaderFixed from "../../components/Header/HeaderFixed";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css"; // optional
+import SideBarAd from "../../components/SideBarAd";
 
 const cx = classNames.bind(styles);
 
@@ -73,7 +74,7 @@ function Shop() {
   return (
     <div className={cx("wrapper")}>
       {show && <HeaderFixed />}
-
+      <SideBarAd />
       <Header />
       <div className={cx("shop__container", "grid", "wide")}>
         <div className={cx("shop__title")}>shop</div>
@@ -197,121 +198,118 @@ function Shop() {
         <div className={cx("shop__list")}>
           <div className={cx("shop__item")}>
             <ShopItem
-              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic12-800x800.webp"
+              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic3-800x800.webp"
+              name="Balcony chair"
+              star="4"
+              price=" $199.00"
+              priceHidden="$250.00"
+            />
+          </div>
+
+          <div className={cx("shop__item")}>
+            <ShopItem
+              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic5-800x800.webp"
               name="Bed with wood frame"
               star="4"
-              price="$123"
-              priceHidden="$123"
+              price="$1,250.00"
+              priceHidden="$1,389.00"
+            />
+          </div>
+
+          <div className={cx("shop__item")}>
+            <ShopItem
+              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic17-800x800.webp"
+              name="Bedroom cabinet Orlean"
+              star="4"
+              price="$799.00"
+              priceHidden="$899.00"
+            />
+          </div>
+
+          <div className={cx("shop__item")}>
+            <ShopItem
+              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic13-800x800.webp"
+              name=" $350.00"
+              star="4"
+              price=" $350.00"
+              priceHidden="$399.00"
+            />
+          </div>
+
+          <div className={cx("shop__item")}>
+            <ShopItem
+              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic20-800x800.webp"
+              name="Cosy RTV sofa"
+              star="4"
+              price="$1,600.00"
+              priceHidden="$1,300.00"
+            />
+          </div>
+
+          <div className={cx("shop__item")}>
+            <ShopItem
+              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic8-800x800.webp"
+              name="Desk lamp"
+              star="4"
+              price="$135.00"
             />
           </div>
 
           <div className={cx("shop__item")}>
             <ShopItem
               src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic12-800x800.webp"
-              name="Bed with wood frame"
+              name="Dining room table"
               star="4"
-              price="$123"
-              priceHidden="$123"
+              price=" $1,200.00"
+              priceHidden="$1,399.00"
             />
           </div>
 
           <div className={cx("shop__item")}>
             <ShopItem
-              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic12-800x800.webp"
-              name="Bed with wood frame"
+              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/02/befurniturestore2-product-pic6-800x800.webp"
+              name="Family Bed Oregon"
               star="4"
-              price="$123"
-              priceHidden="$123"
+              price="$1,899.00"
+              priceHidden="$1,999.00"
             />
           </div>
 
           <div className={cx("shop__item")}>
             <ShopItem
-              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic12-800x800.webp"
-              name="Bed with wood frame"
+              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic4-800x800.webp"
+              name="Hanging outdoor bed"
               star="4"
-              price="$123"
-              priceHidden="$123"
+              price="$358.00"
             />
           </div>
 
           <div className={cx("shop__item")}>
             <ShopItem
-              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic12-800x800.webp"
-              name="Bed with wood frame"
+              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/02/befurniturestore2-product-pic11-800x800.webp"
+              name="Kitchen table Oklahoma"
               star="4"
-              price="$123"
-              priceHidden="$123"
+              price="$689.00"
             />
           </div>
 
           <div className={cx("shop__item")}>
             <ShopItem
-              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic12-800x800.webp"
-              name="Bed with wood frame"
+              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic9-800x800.webp"
+              name="Living room lamp"
               star="4"
-              price="$123"
-              priceHidden="$123"
+              price=" $450.00"
+              priceHidden="$599.00"
             />
           </div>
 
           <div className={cx("shop__item")}>
             <ShopItem
-              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic12-800x800.webp"
-              name="Bed with wood frame"
+              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic19-800x800.webp"
+              name="Sleeper sofa Cubic"
               star="4"
-              price="$123"
-              priceHidden="$123"
-            />
-          </div>
-
-          <div className={cx("shop__item")}>
-            <ShopItem
-              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic12-800x800.webp"
-              name="Bed with wood frame"
-              star="4"
-              price="$123"
-              priceHidden="$123"
-            />
-          </div>
-
-          <div className={cx("shop__item")}>
-            <ShopItem
-              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic12-800x800.webp"
-              name="Bed with wood frame"
-              star="4"
-              price="$123"
-              priceHidden="$123"
-            />
-          </div>
-
-          <div className={cx("shop__item")}>
-            <ShopItem
-              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic12-800x800.webp"
-              name="Bed with wood frame"
-              star="4"
-              price="$123"
-              priceHidden="$123"
-            />
-          </div>
-
-          <div className={cx("shop__item")}>
-            <ShopItem
-              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic12-800x800.webp"
-              name="Bed with wood frame"
-              star="4"
-              price="$123"
-              priceHidden="$123"
-            />
-          </div>
-
-          <div className={cx("shop__item")}>
-            <ShopItem
-              src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic12-800x800.webp"
-              name="Bed with wood frame"
-              star="4"
-              price="$123"
-              priceHidden="$123"
+              priceHidden="$1,299.00"
+              price=""
             />
           </div>
         </div>

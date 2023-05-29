@@ -26,6 +26,8 @@ const images = {
   footerVisa: require("./footerVisa.svg").default,
   freeShip: require("./freeShip.svg").default,
   call: require("./call.svg").default,
+  buy: require("./buy.svg").default,
+  buyBlack: require("./buyBlack.svg").default,
 };
 
 export default images;

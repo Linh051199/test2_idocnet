@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 const cx = classNames.bind(styles);
 function HeaderBottom() {
   const [showLoinForm, setShowLoinForm] = useState(false);
+  const [showCart, setShowCart] = useState(false);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [messErr, setMessErr] = useState({});
@@ -60,7 +61,10 @@ function HeaderBottom() {
             <i className="fa-regular fa-heart"></i>
           </div>
 
-          <div className={cx("headerBottom__contactItem")}>
+          <div
+            className={cx("headerBottom__contactItem")}
+            onClick={() => setShowCart(true)}
+          >
             <div className={cx("headerBottom__contactItemNumber")}>0</div>
             <img src={images.cart} alt="img" />
           </div>
@@ -116,6 +120,41 @@ function HeaderBottom() {
               Lost your password?
             </div>
           </div>
+        )}
+
+        {showCart && (
+          <>
+            <div className={cx("headerBottom__overlay")}></div>
+
+            <div className={cx("headerBottom__cart")}>
+              <div className={cx("headerBottom__cartHeader")}>
+                <i
+                  class="fa-solid fa-xmark"
+                  onClick={() => setShowCart(false)}
+                ></i>
+                <img src={images.buyBlack} alt="img" />
+                <p>CART</p>
+              </div>
+              <div className={cx("headerBottom__cartBody")}>
+                <img src={images.buyBlack} alt="img" />
+                <p>Your cart is currently empty.</p>
+              </div>
+              <div className={cx("headerBottom__cartFooter")}>
+                <div className={cx("headerBottom__subTotal")}>
+                  <span>Subtotal</span>
+                  <p>$0.00</p>
+                </div>
+                <div className={cx("headerBottom__total")}>
+                  <span>Total</span>
+                  <p>$0.00</p>
+                </div>
+                <div className={cx("headerBottom__checkoutBtn")}>
+                  Proceed to checkout
+                </div>
+                <div className={cx("headerBottom__viewCart")}>View cart</div>
+              </div>
+            </div>
+          </>
         )}
       </div>
     </div>
