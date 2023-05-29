@@ -12,15 +12,15 @@ function HeaderTop() {
         <div className={cx("headerTop__welcome")}>Welcome to Our Store!</div>
         <div className={cx("headerTop__highLight")}>
           <div className={cx("headerTop__highLightItem")}>
-            <img src={images.air} />
+            <img src={images.air} alt="img" />
             <p>Free delivery over $200</p>
           </div>
           <div className={cx("headerTop__highLightItem")}>
-            <img src={images.coin} />
+            <img src={images.coin} alt="img" />
             <p>Money back guarantee</p>
           </div>
           <div className={cx("headerTop__highLightItem")}>
-            <img src={images.tag} />
+            <img src={images.tag} alt="img" />
             <p>Weekly new arrivals</p>
           </div>
         </div>

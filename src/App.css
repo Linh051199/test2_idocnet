@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.thumb {
+  width: 15px;
+  height: 15px;
+  cursor: grab;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid black;
+  top: -5px;
+}

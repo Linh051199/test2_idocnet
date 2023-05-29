@@ -1,7 +1,226 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import classNames from "classnames/bind";
+import { Rate } from "antd";
 
+import styles from "./SofasProduct.module.scss";
+import { Link } from "react-router-dom";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import HeaderFixed from "../../components/Header/HeaderFixed";
+import images from "../../assets/images";
+import ShopItem from "../Shop/ShopItem";
+
+const cx = classNames.bind(styles);
 function SofasProduct() {
-  return <div>SofasProduct</div>;
+  const [show, setShow] = useState(false);
+  const [numberBook, setNumberBook] = useState(1);
+  const [colorWhite, setColorWhite] = useState(false);
+  const [colorGray, setColorGray] = useState(false);
+  const [colorWood, setColorWood] = useState(false);
+  const [btnBookActive, setBtnBookActive] = useState(false);
+
+  const handleOnClickSubtract = () => {
+    if (numberBook > 1) {
+      setNumberBook(numberBook - 1);
+    }
+  };
+
+  const location = useLocation();
+  const data = location.state;
+  console.log(data);
+
+  const controlHeader = () => {
+    if (window.scrollY > 150) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlHeader);
+    return () => {
+      window.removeEventListener("scroll", controlHeader);
+    };
+  }, []);
+
+  const handleOnClickWhite = () => {
+    setColorWhite(true);
+    setColorGray(false);
+    setColorWood(false);
+    setBtnBookActive(true);
+  };
+
+  const handleOnClickGray = () => {
+    setColorWhite(false);
+    setColorGray(true);
+    setColorWood(false);
+    setBtnBookActive(true);
+  };
+
+  const handleOnClickWood = () => {
+    setColorWhite(false);
+    setColorGray(false);
+    setColorWood(true);
+    setBtnBookActive(true);
+  };
+
+  return (
+    <div className={"wrapper"}>
+      {show && <HeaderFixed />}
+      <Header />
+      <div className={cx("container", "grid", "wide")}>
+        <div className={cx("product__info")}>
+          <div className={cx("product__list")}>
+            <img src={data.src} alt="img" />
+          </div>
+          <div className={cx("product__decs")}>
+            <div className={cx("product__name")}>{data.name}</div>
+            <div className={cx("product__rate")}>
+              <Rate
+                disabled={true}
+                className={cx("shopItem__rateStar")}
+                defaultValue={data.star}
+              />
+              <p>(1 customer reivew)</p>
+            </div>
+            <div className={cx("product__price")}>
+              <div className={cx("product__priceHidden")}>
+                {data.priceHidden}
+              </div>
+              <div className={cx("product__priceShow")}>{data.price}</div>
+            </div>
+            <div className={cx("product__warranty")}>
+              <p>Warranty</p>
+              <div>
+                <div className={cx("product__warrentyNumber")}>5</div>
+                <span>5 year's warranty</span>
+              </div>
+            </div>
+            <div className={cx("product__separate")}></div>
+            <div className={cx("product__color")}>
+              <p>Color</p>
+              <div
+                className={
+                  colorWhite
+                    ? cx("product__colorItem", "white", "activeColor")
+                    : cx("product__colorItem", "white")
+                }
+                onClick={handleOnClickWhite}
+              ></div>
+              <div
+                className={
+                  colorGray
+                    ? cx("product__colorItem", "gray", "activeColor")
+                    : cx("product__colorItem", "gray")
+                }
+                onClick={handleOnClickGray}
+              ></div>
+              <div
+                className={
+                  colorWood
+                    ? cx("product__colorItem", "wood", "activeColor")
+                    : cx("product__colorItem", "wood")
+                }
+                onClick={handleOnClickWood}
+              ></div>
+            </div>
+
+            <div className={cx("product__book")}>
+              <div className={cx("product__number")}>
+                <span onClick={handleOnClickSubtract}>-</span>
+                <p>{numberBook}</p>
+                <span onClick={() => setNumberBook(numberBook + 1)}>+</span>
+              </div>
+              {btnBookActive ? (
+                <div className={cx("product__btnActive")}>buy now</div>
+              ) : (
+                <div className={cx("product__btn")}>buy now</div>
+              )}
+            </div>
+
+            <div className={cx("product__contact")}>
+              <div className={cx("product__contactIcon")}>
+                <img src={images.freeShip} alt="img" />
+              </div>
+              <div className={cx("product__contactDecs")}>
+                <p>Free shipping</p>
+                <span>Over 500$</span>
+              </div>
+            </div>
+            <div className={cx("product__contact")}>
+              <div className={cx("product__contactIcon")}>
+                <img src={images.call} alt="img" />
+              </div>
+              <div className={cx("product__contactDecs", "hoverContact")}>
+                <p>Chat online</p>
+                <span>Contact with our agent</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={cx("product__feedBack")}>
+          <div className={cx("product__feedBackHeader")}>
+            1 review for Cosy RTV sofa
+          </div>
+          <div className={cx("product__feedBackBody")}>
+            <div className={cx("product__feedBackBodyTop")}>
+              <div className={cx("product__feedBackBodyTopAuthor")}>
+                <img
+                  src="https://secure.gravatar.com/avatar/ee62ac86f08fd6ffac18cbf25b07679f?s=120&d=mm&r=g"
+                  alt="img"
+                />
+                <p>Muffingroup</p>
+                <span>– February 10, 2023</span>
+              </div>
+              <Rate
+                disabled={true}
+                className={cx("product__feedBackBodyTopRate")}
+                defaultValue={data.star}
+              />
+            </div>
+            <div className={cx("product__feedBackBodySeparate")}></div>
+            <div className={cx("product__feedBackBodyBottom")}>
+              <p>Love to watch TV in it</p>
+            </div>
+          </div>
+          <div className={cx("product__feedBackFooter")}>
+            <p>Add a review</p>
+            <span>
+              You must be <a>logged in</a> to post a review.
+            </span>
+          </div>
+        </div>
+        <div className={cx("product__more")}>
+          <div className={cx("product__moreHeader")}>
+            <span>BE FURNITURE</span>
+            <p>RELATED PRODUCTS</p>
+          </div>
+          <div className={cx("product__moreBody")}>
+            <div className={cx("product__moreItem")}>
+              <ShopItem
+                src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic21-800x800.webp"
+                name="Puffy sofa Orlando"
+                star="4"
+                price="$1,670.00"
+                priceHidden="$1,599.00"
+              />
+            </div>
+            <div className={cx("product__moreItem")}>
+              <ShopItem
+                src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic19-800x800.webp"
+                name="Sleeper sofa Cubic"
+                star="3"
+                price="$1,299.00"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 export default SofasProduct;

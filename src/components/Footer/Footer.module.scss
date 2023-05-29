@@ -1,0 +1,121 @@
+.wrapper {
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 130px;
+}
+
+.footer__separate {
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 60px;
+  width: 100%;
+
+  img {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 0 10px;
+  }
+}
+
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 60px;
+
+  .footer__contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 180px;
+
+    .footer__contactTitle {
+      font-size: var(--font-size32);
+      font-weight: var(--font-weight-medium);
+      color: var(--primaryColor);
+      text-align: left;
+    }
+
+    .footer__contactInfo {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+      // width: 100%;
+
+      .footer__contactInfoItem {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: var(--font-size16);
+        color: var(--primaryColor);
+
+        a {
+          margin-top: 5px;
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+
+        &:first-child {
+          padding-right: 135px;
+        }
+      }
+    }
+  }
+
+  .footer__info {
+    position: relative;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    a {
+      font-size: var(--font-size15);
+      font-weight: var(--font-weight-medium);
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      color: var(--primaryColor);
+      cursor: pointer;
+    }
+  }
+}
+
+.footer__author {
+  display: flex;
+  border-top: 1px solid #ddd;
+  justify-content: space-between;
+  padding: 70px 0;
+
+  .footer__authorLink {
+    font-size: var(--font-size16);
+    color: var(--primaryColor);
+    height: 100%;
+
+    div {
+      a {
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .footer__authorIcon {
+    img {
+      width: 42px;
+      margin-left: 10px;
+    }
+  }
+}

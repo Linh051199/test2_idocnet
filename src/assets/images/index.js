@@ -18,6 +18,14 @@ const images = {
   yourstyle: require("./yourstyle.svg").default,
   jbe: require("./jbe.svg").default,
   beddie: require("./beddie.svg").default,
+  footerLogo: require("./footerLogo.svg").default,
+  footerPayPal: require("./footerPayPal.svg").default,
+  footerMastercard: require("./footerMastercard.svg").default,
+  footerMaestro: require("./footerMaestro.svg").default,
+  footerStripe: require("./footerStripe.svg").default,
+  footerVisa: require("./footerVisa.svg").default,
+  freeShip: require("./freeShip.svg").default,
+  call: require("./call.svg").default,
 };
 
 export default images;

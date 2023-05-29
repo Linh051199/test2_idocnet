@@ -3,6 +3,7 @@ import classNames from "classnames/bind";
 
 import styles from "./HeaderNav.module.scss";
 import images from "../../../assets/images";
+import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
@@ -12,9 +13,12 @@ function HeaderNav() {
       <div className={cx("header__body", "grid", "wide")}>
         <div className={cx("header__menu")}>
           <div className={cx("header__menuHeader")}>
-            <i class="fa-solid fa-bars"></i>
+            <i className="fa-solid fa-bars"></i>
             <p>Browse Categories</p>
-            <i class="fa-solid fa-chevron-down" style={{ fontSize: "9px" }}></i>
+            <i
+              className="fa-solid fa-chevron-down"
+              style={{ fontSize: "9px" }}
+            ></i>
           </div>
 
           <div className={cx("header__menuList")}>
@@ -23,7 +27,7 @@ function HeaderNav() {
                 <img src={images.chair} alt="img" />
                 <p>Chairs</p>
                 <i
-                  class="fa-solid fa-chevron-right"
+                  className="fa-solid fa-chevron-right"
                   style={{ fontSize: "12px" }}
                 ></i>
               </div>
@@ -105,7 +109,7 @@ function HeaderNav() {
                 <img src={images.beds} alt="img" />
                 <p>Beds</p>
                 <i
-                  class="fa-solid fa-chevron-right"
+                  className="fa-solid fa-chevron-right"
                   style={{ fontSize: "12px" }}
                 ></i>
               </div>
@@ -166,7 +170,7 @@ function HeaderNav() {
                 <img src={images.lamp} alt="img" />
                 <p>Lamps</p>
                 <i
-                  class="fa-solid fa-chevron-right"
+                  className="fa-solid fa-chevron-right"
                   style={{ fontSize: "12px" }}
                 ></i>
               </div>
@@ -266,7 +270,7 @@ function HeaderNav() {
                 <img src={images.table} alt="img" />
                 <p>Tables</p>
                 <i
-                  class="fa-solid fa-chevron-right"
+                  className="fa-solid fa-chevron-right"
                   style={{ fontSize: "12px" }}
                 ></i>
               </div>
@@ -316,9 +320,80 @@ function HeaderNav() {
                 <img src={images.armchair} alt="img" />
                 <p>Armchairs</p>
                 <i
-                  class="fa-solid fa-chevron-right"
+                  className="fa-solid fa-chevron-right"
                   style={{ fontSize: "12px" }}
                 ></i>
+              </div>
+              <div className={cx("header__menuItemSub")}>
+                <div className={cx("header__menuChair")}>
+                  <div className={cx("header__menuChairHeader")}>
+                    <div className={cx("header__menuChairItem")}>
+                      <img
+                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic1.webp"
+                        alt="img"
+                        width="200px"
+                        height="200px"
+                      />
+                      <span className={cx("header__menuChairItemTitle")}>
+                        fabric Chair
+                      </span>
+                      <p>Wing chairs</p>
+                      <p>Rocking chairs</p>
+                      <p>Kitchen tables parts</p>
+                    </div>
+
+                    <div className={cx("header__menuChairSeparate")}></div>
+
+                    <div className={cx("header__menuChairItem")}>
+                      <img
+                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic2.webp"
+                        alt="img"
+                        width="200px"
+                        height="200px"
+                      />
+                      <span className={cx("header__menuChairItemTitle")}>
+                        HIGH-BACK CHAIRS
+                      </span>
+                      <p>Recliners</p>
+                      <p>Armchairs with footstool</p>
+                      <p>Rattan armchairs</p>
+                    </div>
+
+                    <div className={cx("header__menuChairSeparate")}></div>
+
+                    <div className={cx("header__menuChairItem")}>
+                      <img
+                        src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic3.webp"
+                        alt="img"
+                        width="200px"
+                        height="200px"
+                      />
+                      <span className={cx("header__menuChairItemTitle")}>
+                        KIDS CHAIRS
+                      </span>
+                      <p>Wing chairs</p>
+                      <p>Rocking chairs</p>
+                      <p>Kids armchairs parts</p>
+                    </div>
+                  </div>
+                  <div className={cx("header__menuChairFooter")}>
+                    <div className={cx("header__menuChairFooterItem")}>
+                      <img src={images.senco} alt="img" />
+                    </div>
+                    <div className={cx("header__menuChairFooterItem")}>
+                      <img src={images.oo} alt="img" />
+                    </div>
+                    <div className={cx("header__menuChairFooterItem")}>
+                      <img src={images.yourstyle} alt="img" />
+                    </div>
+                    <div className={cx("header__menuChairFooterItem")}>
+                      <img src={images.jbe} alt="img" />
+                    </div>
+                    <div className={cx("header__menuChairFooterItem")}>
+                      <img src={images.beddie} alt="img" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -328,13 +403,14 @@ function HeaderNav() {
                 <p>Cabinets</p>
               </div>
             </div>
-
-            <div className={cx("header__menuItem")}>
-              <div className={cx("header__menuItemTitle")}>
-                <img src={images.sofas} alt="img" />
-                <p>Sofas</p>
+            <Link to={"/test2_idocnet/sofas"}>
+              <div className={cx("header__menuItem")}>
+                <div className={cx("header__menuItemTitle")}>
+                  <img src={images.sofas} alt="img" />
+                  <p>Sofas</p>
+                </div>
               </div>
-            </div>
+            </Link>
 
             <div className={cx("header__menuItem")}>
               <div className={cx("header__menuItemTitle")}>

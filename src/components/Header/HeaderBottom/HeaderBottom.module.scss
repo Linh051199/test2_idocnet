@@ -4,6 +4,7 @@
   border-bottom: 1px solid #ddd;
 
   .headerBottom_body {
+    position: relative;
     display: flex;
     width: 100%;
     height: 100px;
@@ -23,6 +24,17 @@
 
     .headerBottom__contact {
       display: flex;
+    }
+
+    .headerBottom__Login {
+      position: absolute;
+      top: 75px;
+      z-index: 99;
+      right: 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      width: 340px;
+      padding: 20px;
     }
   }
 }
@@ -94,5 +106,91 @@
     &::placeholder {
       color: #433679;
     }
+  }
+}
+
+.headerBottom__Login {
+  .headerBottom__formLoginHeader {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-size: var(--font-size26);
+      font-weight: var(--font-weight-medium);
+      color: var(--primaryColor);
+    }
+
+    i {
+      font-size: var(--font-size20);
+      opacity: 0.5;
+      transition: transform linear 0.2s, opacity linear 0.2s;
+
+      &:hover {
+        transform: rotate(180deg);
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .headerBottom__LoginForm {
+    form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      // border-bottom: 1px solid #ddd;
+      height: 50px;
+
+      i {
+        padding: 0 10px;
+      }
+
+      input {
+        flex: 1;
+        border: none;
+        outline: none;
+      }
+    }
+    p {
+      text-align: left;
+      color: red;
+    }
+
+    .headerBottom__LoginFormCheckBox {
+      color: var(--primaryColor);
+      font-size: var(--font-size16);
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 20px;
+
+      input {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .headerBottom__LoginBtn {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size16);
+    font-weight: var(--font-weight-medium);
+    background-color: #ed6351;
+    color: var(--text-color-white);
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+
+  .headerBottom__LoginLostPass {
+    font-size: var(--font-size14);
+    opacity: 0.5;
+    margin-top: 10px;
   }
 }
