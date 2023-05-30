@@ -66,6 +66,9 @@ function HeaderBottom() {
           </form>
         </div>
         <div className={cx("headerBottom__contact")}>
+          <div className={cx("headerBottom__contactItem", "searchIcon")}>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
           <div className={cx("headerBottom__contactItem")}>
             <i className="fa-regular fa-heart"></i>
           </div>

@@ -544,6 +544,9 @@
 
 /* Mobile */
 @media (max-width: 739px) {
+  .headerNav__wrapper {
+    height: 51px !important;
+  }
   .header__nav {
     display: none !important;
   }
@@ -567,5 +570,9 @@
 
   .header__menuResponsive {
     display: flex;
+  }
+
+  .header__navResponsiveItem {
+    font-size: var(--font-size20) !important;
   }
 }

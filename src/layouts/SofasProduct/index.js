@@ -77,91 +77,6 @@ function SofasProduct() {
       <Header />
       <div className={cx("container", "grid", "wide")}>
         <div className={cx("product__info")}>
-          <div className={cx("product__list")}>
-            <div
-              className={cx("product__image")}
-              onClick={() => setShowImage(true)}
-            >
-              <img src={data.src} alt="img" />
-            </div>
-            <div className={cx("product__moreInfo")}>
-              <div className={cx("product__moreInfoItem")}>
-                <p>Ut et montes mauris ornare</p>
-                <span>
-                  Ut et montes mauris ornare. Sed enim dignissim convallis
-                  malesuada dapibus. Aliquet placerat eget convallis arcu
-                  pharetra vitae tempor sit. Neque duis non pellentesque enim
-                  tellus magna facilisis neque donec. Pellentesque tempor
-                  scelerisque tempus nascetur cursus ac pellentesque. Felis
-                  bibendum id duis odio. Nisl id blandit purus id sed odio
-                  nullam scelerisque dolor. Commodo imperdiet ultricies ipsum ut
-                  nunc senectus. Convallis facilisis euismod vel volutpat.
-                </span>
-                <img
-                  src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/02/befurniturestore2-productdetails-pic1.webp"
-                  alt="img"
-                ></img>
-              </div>
-              <div className={cx("product__moreInfoItem")}>
-                <p>Tempor nunc sed arcu lectus dignissim congue.</p>
-                <span>
-                  Morbi ut sit iaculis non. Sodales aliquet nulla posuere leo
-                  euismod amet. Amet nullam tincidunt imperdiet in tellus congue
-                  sed. Eleifend nisl tincidunt porttitor libero facilisis
-                  placerat turpis. Nunc nullam dignissim nibh sapien.
-                  Ullamcorper quam est nec ipsum suspendisse vulputate
-                  ullamcorper adipiscing id. Ultricies varius in viverra ac
-                  molestie nibh. Eget nulla purus nisl tempor bibendum. Sed
-                  nascetur pretium nibh ullamcorper amet condimentum molestie
-                  penatibus in. Sed facilisis at id neque sit pretium platea.
-                  Ultrices fermentum consectetur tristique ultrices ac commodo
-                  vitae. Lectus et eu massa auctor.
-                </span>
-                <img
-                  src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic20.webp"
-                  alt="img"
-                ></img>
-              </div>
-              <div className={cx("product__moreInfoProduct")}>
-                <h3>Additional information</h3>
-                <div className={cx("product__moreInfoProductItem")}>
-                  <h4>Weight</h4>
-                  <span></span>
-                  <p>15 kg</p>
-                </div>
-
-                <div className={cx("product__moreInfoProductItem")}>
-                  <h4>Dimensions</h4>
-                  <span></span>
-                  <p>120 × 120 × 50 cm</p>
-                </div>
-
-                <div className={cx("product__moreInfoProductItem")}>
-                  <h4>Warranty</h4>
-                  <span></span>
-                  <p>5 year's</p>
-                </div>
-
-                <div className={cx("product__moreInfoProductItem")}>
-                  <h4>Color</h4>
-                  <span></span>
-                  <p>White, Gray, Wood</p>
-                </div>
-
-                <div className={cx("product__moreInfoProductItem")}>
-                  <h4>Materials</h4>
-                  <span></span>
-                  <p>Textile, Velvet, Wood</p>
-                </div>
-
-                <div className={cx("product__moreInfoProductItem")}>
-                  <h4>Room</h4>
-                  <span></span>
-                  <p>Living room</p>
-                </div>
-              </div>
-            </div>
-          </div>
           <div className={cx("product__decs")}>
             <div className={cx("product__name")}>{data.name}</div>
             <div className={cx("product__rate")}>
@@ -251,6 +166,183 @@ function SofasProduct() {
               <div className={cx("product__contactDecs", "hoverContact")}>
                 <p>Chat online</p>
                 <span>Contact with our agent</span>
+              </div>
+            </div>
+          </div>
+          <div className={cx("product__list")}>
+            <div
+              className={cx("product__image")}
+              onClick={() => setShowImage(true)}
+            >
+              <img src={data.src} alt="img" />
+            </div>
+            <div className={cx("product__decsMedia")}>
+              <div className={cx("product__name")}>{data.name}</div>
+              <div className={cx("product__rate")}>
+                <Rate
+                  disabled={true}
+                  className={cx("shopItem__rateStar")}
+                  defaultValue={data.star}
+                />
+                <p>(1 customer reivew)</p>
+              </div>
+              <div className={cx("product__price")}>
+                <div className={cx("product__priceHidden")}>
+                  {data.priceHidden}
+                </div>
+                <div className={cx("product__priceShow")}>{data.price}</div>
+              </div>
+              <div className={cx("product__warranty")}>
+                <p>Warranty</p>
+                <Tippy content="5 year's">
+                  <div>
+                    <div className={cx("product__warrentyNumber")}>5</div>
+                    <span>5 year's warranty</span>
+                  </div>
+                </Tippy>
+              </div>
+              <div className={cx("product__separate")}></div>
+              <div className={cx("product__color")}>
+                <p>Color</p>
+                <Tippy content="White">
+                  <div
+                    className={
+                      colorWhite
+                        ? cx("product__colorItem", "white", "activeColor")
+                        : cx("product__colorItem", "white")
+                    }
+                    onClick={handleOnClickWhite}
+                  ></div>
+                </Tippy>
+                <Tippy content="Gray">
+                  <div
+                    className={
+                      colorGray
+                        ? cx("product__colorItem", "gray", "activeColor")
+                        : cx("product__colorItem", "gray")
+                    }
+                    onClick={handleOnClickGray}
+                  ></div>
+                </Tippy>
+                <Tippy content="Wood">
+                  <div
+                    className={
+                      colorWood
+                        ? cx("product__colorItem", "wood", "activeColor")
+                        : cx("product__colorItem", "wood")
+                    }
+                    onClick={handleOnClickWood}
+                  ></div>
+                </Tippy>
+              </div>
+
+              <div className={cx("product__book")}>
+                <div className={cx("product__number")}>
+                  <span onClick={handleOnClickSubtract}>-</span>
+                  <p>{numberBook}</p>
+                  <span onClick={() => setNumberBook(numberBook + 1)}>+</span>
+                </div>
+                {btnBookActive ? (
+                  <div className={cx("product__btnActive")}>buy now</div>
+                ) : (
+                  <div className={cx("product__btn")}>buy now</div>
+                )}
+              </div>
+
+              <div className={cx("product__contact")}>
+                <div className={cx("product__contactIcon")}>
+                  <img src={images.freeShip} alt="img" />
+                </div>
+                <div className={cx("product__contactDecs")}>
+                  <p>Free shipping</p>
+                  <span>Over 500$</span>
+                </div>
+              </div>
+              <div className={cx("product__contact")}>
+                <div className={cx("product__contactIcon")}>
+                  <img src={images.call} alt="img" />
+                </div>
+                <div className={cx("product__contactDecs", "hoverContact")}>
+                  <p>Chat online</p>
+                  <span>Contact with our agent</span>
+                </div>
+              </div>
+            </div>
+            <div className={cx("product__moreInfo")}>
+              <div className={cx("product__moreInfoItem")}>
+                <p>Ut et montes mauris ornare</p>
+                <span>
+                  Ut et montes mauris ornare. Sed enim dignissim convallis
+                  malesuada dapibus. Aliquet placerat eget convallis arcu
+                  pharetra vitae tempor sit. Neque duis non pellentesque enim
+                  tellus magna facilisis neque donec. Pellentesque tempor
+                  scelerisque tempus nascetur cursus ac pellentesque. Felis
+                  bibendum id duis odio. Nisl id blandit purus id sed odio
+                  nullam scelerisque dolor. Commodo imperdiet ultricies ipsum ut
+                  nunc senectus. Convallis facilisis euismod vel volutpat.
+                </span>
+                <img
+                  src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/02/befurniturestore2-productdetails-pic1.webp"
+                  alt="img"
+                ></img>
+              </div>
+              <div className={cx("product__moreInfoItem")}>
+                <p>Tempor nunc sed arcu lectus dignissim congue.</p>
+                <span>
+                  Morbi ut sit iaculis non. Sodales aliquet nulla posuere leo
+                  euismod amet. Amet nullam tincidunt imperdiet in tellus congue
+                  sed. Eleifend nisl tincidunt porttitor libero facilisis
+                  placerat turpis. Nunc nullam dignissim nibh sapien.
+                  Ullamcorper quam est nec ipsum suspendisse vulputate
+                  ullamcorper adipiscing id. Ultricies varius in viverra ac
+                  molestie nibh. Eget nulla purus nisl tempor bibendum. Sed
+                  nascetur pretium nibh ullamcorper amet condimentum molestie
+                  penatibus in. Sed facilisis at id neque sit pretium platea.
+                  Ultrices fermentum consectetur tristique ultrices ac commodo
+                  vitae. Lectus et eu massa auctor.
+                </span>
+                <img
+                  src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic20.webp"
+                  alt="img"
+                ></img>
+              </div>
+              <div className={cx("product__moreInfoProduct")}>
+                <h3>Additional information</h3>
+                <div className={cx("product__moreInfoProductItem")}>
+                  <h4>Weight</h4>
+                  <span></span>
+                  <p>15 kg</p>
+                </div>
+
+                <div className={cx("product__moreInfoProductItem")}>
+                  <h4>Dimensions</h4>
+                  <span></span>
+                  <p>120 × 120 × 50 cm</p>
+                </div>
+
+                <div className={cx("product__moreInfoProductItem")}>
+                  <h4>Warranty</h4>
+                  <span></span>
+                  <p>5 year's</p>
+                </div>
+
+                <div className={cx("product__moreInfoProductItem")}>
+                  <h4>Color</h4>
+                  <span></span>
+                  <p>White, Gray, Wood</p>
+                </div>
+
+                <div className={cx("product__moreInfoProductItem")}>
+                  <h4>Materials</h4>
+                  <span></span>
+                  <p>Textile, Velvet, Wood</p>
+                </div>
+
+                <div className={cx("product__moreInfoProductItem")}>
+                  <h4>Room</h4>
+                  <span></span>
+                  <p>Living room</p>
+                </div>
               </div>
             </div>
           </div>
