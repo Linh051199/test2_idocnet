@@ -5,12 +5,13 @@ import styles from "./HeaderFixed.module.scss";
 import HeaderBottom from "../HeaderBottom";
 import images from "../../../assets/images";
 import { Link } from "react-router-dom";
+import HeaderNav from "../HeaderNav";
 
 const cx = classNames.bind(styles);
 
 function HeaderFixed() {
   return (
-    <div className={cx("wrapper", "gird", "wide")}>
+    <div className={cx("wrapper")}>
       <HeaderBottom />
 
       <div className={cx("menu", "grid")}>
@@ -56,6 +57,10 @@ function HeaderFixed() {
             <p className={cx("active")}>Sales</p>
           </div>
         </div>
+      </div>
+
+      <div className={cx("HeaderNav")}>
+        <HeaderNav />
       </div>
     </div>
   );

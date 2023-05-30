@@ -29,19 +29,21 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className={cx("footer__info")}>
-            <a>- shop</a>
-            <a>- projects</a>
-            <a>- faq</a>
-            <a>- services</a>
-            <a>- about us</a>
-            <a>- contact</a>
-          </div>
-          <div className={cx("footer__info")}>
-            <a>- chairs</a>
-            <a>- beds</a>
-            <a>- table</a>
-            <a>- sofas</a>
+          <div className={cx("footer__infoList")}>
+            <div className={cx("footer__info")}>
+              <a>- shop</a>
+              <a>- projects</a>
+              <a>- faq</a>
+              <a>- services</a>
+              <a>- about us</a>
+              <a>- contact</a>
+            </div>
+            <div className={cx("footer__info")}>
+              <a>- chairs</a>
+              <a>- beds</a>
+              <a>- table</a>
+              <a>- sofas</a>
+            </div>
           </div>
         </div>
         <div className={cx("footer__author")}>

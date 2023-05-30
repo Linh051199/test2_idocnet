@@ -10,7 +10,7 @@
 
   .controlWebsite {
     position: absolute;
-    top: 50%;
+    top: 395px;
     transform: translateY(-50%);
     left: -65px;
     display: flex;
@@ -62,7 +62,7 @@
 
   .controlbuyNow {
     position: absolute;
-    top: 57%;
+    top: 465px;
     transform: translateY(-50%);
     left: -65px;
     display: flex;
@@ -203,5 +203,12 @@
   100% {
     transform: translateY(0%);
     opacity: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .wrapper {
+    display: none;
   }
 }

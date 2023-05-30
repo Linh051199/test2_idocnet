@@ -21,6 +21,10 @@
     background-color: #fff;
   }
 
+  .HeaderNav {
+    display: none;
+  }
+
   @keyframes Show {
     from {
       transform: translateY(-100%);
@@ -61,5 +65,25 @@
 
   .active {
     color: #f2887a !important;
+  }
+}
+
+/* Tablet - PC with low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .menu {
+    display: none;
+  }
+  .HeaderNav {
+    display: block !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .menu {
+    display: none;
+  }
+  .HeaderNav {
+    display: block !important;
   }
 }

@@ -37,3 +37,10 @@
     padding: 0 5px;
   }
 }
+
+/* Mobile */
+@media (max-width: 739px) {
+  .headerTop__wrapper {
+    display: none;
+  }
+}

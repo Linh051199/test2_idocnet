@@ -11,6 +11,7 @@ import HeaderFixed from "../../components/Header/HeaderFixed";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css"; // optional
 import SideBarAd from "../../components/SideBarAd";
+import images from "../../assets/images";
 
 const cx = classNames.bind(styles);
 
@@ -24,7 +25,7 @@ function Shop() {
   const [showFilterNav, setShowFilterNav] = useState(false);
 
   const controlHeader = () => {
-    if (window.scrollY > 150) {
+    if (window.scrollY > 200) {
       setShow(true);
     } else {
       setShow(false);
@@ -108,7 +109,28 @@ function Shop() {
                 360
               </p>
             </div>
-            <div className={cx("shop__filterIcon")}>2</div>
+            <div className={cx("shop__filterIcon")}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                aria-label="masonry"
+              >
+                <defs>
+                  <style>
+                    .cls-1{`opacity:0.2;`}.path
+                    {`fill:none;stroke-miterlimit:10;`}
+                  </style>
+                </defs>
+                <g id="Layer_4" data-name="Layer 4">
+                  <line class="path" x1="2" y1="7" x2="6" y2="7"></line>
+                  <line class="path" x1="6" y1="9" x2="10" y2="9"></line>
+                  <rect class="path" x="2" y="2" width="12" height="12"></rect>
+                  <line class="path" x1="10" y1="8" x2="14" y2="8"></line>
+                  <line class="path" x1="6" y1="14" x2="6" y2="2"></line>
+                  <line class="path" x1="10" y1="14" x2="10" y2="2"></line>
+                </g>
+              </svg>
+            </div>
             <select className={cx("shop__filterSelect")}>
               <option>Default sorting</option>
               <option>Sort by popularity</option>
@@ -308,8 +330,7 @@ function Shop() {
               src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/01/befurniturestore2-product-pic19-800x800.webp"
               name="Sleeper sofa Cubic"
               star="4"
-              priceHidden="$1,299.00"
-              price=""
+              price="$1,299.00"
             />
           </div>
         </div>

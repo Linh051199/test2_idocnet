@@ -3,6 +3,7 @@ const images = {
   coin: require("./Coin.svg").default,
   tag: require("./Tag.svg").default,
   logo: require("./Logo.svg").default,
+  logoMini: require("./miniLogo.svg").default,
   cart: require("./Cart.svg").default,
   user: require("./User.svg").default,
   chair: require("./Chair.svg").default,
@@ -28,6 +29,8 @@ const images = {
   call: require("./call.svg").default,
   buy: require("./buy.svg").default,
   buyBlack: require("./buyBlack.svg").default,
+  categories: require("./categories.svg").default,
+  filter1: require("./filter1.svg").default,
 };
 
 export default images;

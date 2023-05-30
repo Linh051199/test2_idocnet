@@ -76,8 +76,11 @@ ul li {
 
 /* PC with low resolution */
 @media (min-width: 1024px) and (max-width: 1270px) {
-  .grid.wide {
-    padding: 0 20px;
+  // .grid.wide {
+  //   padding: 0 20px;
+  // }
+  .wide {
+    width: 984px;
   }
 }
 

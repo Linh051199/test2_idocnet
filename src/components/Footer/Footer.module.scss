@@ -35,7 +35,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-right: 180px;
 
     .footer__contactTitle {
       font-size: var(--font-size32);
@@ -71,22 +70,26 @@
       }
     }
   }
-
-  .footer__info {
-    position: relative;
-    width: 20%;
+  .footer__infoList {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    width: 50%;
+    .footer__info {
+      position: relative;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-left: 50px;
 
-    a {
-      font-size: var(--font-size15);
-      font-weight: var(--font-weight-medium);
-      text-transform: uppercase;
-      margin-bottom: 30px;
-      color: var(--primaryColor);
-      cursor: pointer;
+      a {
+        font-size: var(--font-size15);
+        font-weight: var(--font-weight-medium);
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        color: var(--primaryColor);
+        cursor: pointer;
+      }
     }
   }
 }
@@ -98,6 +101,8 @@
   padding: 70px 0;
 
   .footer__authorLink {
+    display: flex;
+
     font-size: var(--font-size16);
     color: var(--primaryColor);
     height: 100%;
@@ -116,6 +121,64 @@
     img {
       width: 42px;
       margin-left: 10px;
+    }
+  }
+}
+
+/* Tablet - PC with low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .footer__contactInfo {
+    flex-direction: column;
+
+    .footer__contactInfoItem {
+      margin-bottom: 20px;
+    }
+  }
+  .footer__author {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .footer__authorLink {
+      margin-top: 20px;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .footer__body {
+    flex-direction: column;
+  }
+  .footer__contactTitle {
+    text-align: center !important;
+  }
+
+  .footer__contactInfo {
+    flex-direction: column;
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    .footer__contactInfoItem {
+      margin-bottom: 20px;
+      &:first-child {
+        padding-right: 0 !important;
+      }
+    }
+  }
+  .footer__infoList {
+    width: 100% !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    margin-top: 30px;
+  }
+  .footer__author {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .footer__authorLink {
+      margin-top: 20px;
     }
   }
 }

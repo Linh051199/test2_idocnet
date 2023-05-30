@@ -42,14 +42,23 @@ function HeaderBottom() {
     if (!isValid) return;
   };
 
+  const handleOnClickOverlayCart = () => {
+    setShowCart(false);
+  };
+
   return (
     <div className={cx("headerBottom_wrapper", "grid")}>
       <div className={cx("headerBottom_body", "grid", "wide")}>
         <Link to={"/test2_idocnet"}>
           <div className={cx("headerBottom__logo")}>
-            <img src={images.logo} alt="logo" width="182px" height="60px" />
+            <img src={images.logo} alt="logo" />
           </div>
         </Link>
+        {/* <Link to={"/test2_idocnet"}>
+          <div className={cx("headerBottom__logoMini")}>
+            <img src={images.logoMini} alt="logo" width="50px" height="50px" />
+          </div>
+        </Link> */}
         <div className={cx("headerBottom__search")}>
           <form className={cx("headerBottom__form")}>
             <i className="fa-solid fa-magnifying-glass"></i>
@@ -124,7 +133,10 @@ function HeaderBottom() {
 
         {showCart && (
           <>
-            <div className={cx("headerBottom__overlay")}></div>
+            <div
+              className={cx("headerBottom__overlay")}
+              onClick={handleOnClickOverlayCart}
+            ></div>
 
             <div className={cx("headerBottom__cart")}>
               <div className={cx("headerBottom__cartHeader")}>

@@ -11,6 +11,7 @@ import HeaderFixed from "../../components/Header/HeaderFixed";
 import { Link } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css"; // optional
+import SideBarAd from "../../components/SideBarAd";
 
 const cx = classNames.bind(styles);
 
@@ -24,7 +25,7 @@ function Sofas() {
   const [showFilterNav, setShowFilterNav] = useState(false);
 
   const controlHeader = () => {
-    if (window.scrollY > 150) {
+    if (window.scrollY > 200) {
       setShow(true);
     } else {
       setShow(false);
@@ -74,6 +75,7 @@ function Sofas() {
   return (
     <div>
       {show && <HeaderFixed />}
+      <SideBarAd />
       <Header />
       <div className={cx("shop__container", "grid", "wide")}>
         <div className={cx("shop__title")}>sofas</div>

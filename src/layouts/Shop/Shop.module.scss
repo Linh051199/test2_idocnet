@@ -21,20 +21,25 @@
 
   .shop__filter {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 55px 0;
     font-size: var(--font-size16);
 
     .shop__filterTitle {
       color: #a8a8a8;
+      // margin-bottom: 20px;
     }
 
     .shop__filterContainer {
       position: relative;
       display: flex;
+      flex-wrap: wrap;
       height: 100%;
       align-items: center;
+      justify-content: space-between;
     }
   }
 
@@ -80,7 +85,7 @@
     outline: none;
     width: 145px;
     height: 30px;
-    margin: 0 20px;
+    margin-right: 20px;
   }
 
   .shop__filterNav {
@@ -208,5 +213,36 @@
   .shop__filterNavSeparate {
     border-bottom: 1px solid #ddd;
     margin: 45px 0;
+  }
+}
+
+/* Tablet - PC with low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .shop__list {
+    .shop__item {
+      width: 49% !important;
+    }
+  }
+}
+/* Mobile */
+@media (max-width: 739px) {
+  .shop__list {
+    .shop__item {
+      width: 100% !important;
+    }
+  }
+  .shop__filterTitle {
+    display: none;
+  }
+
+  .shop__filterContainer {
+    width: 100%;
+    flex-direction: row-reverse;
+    .shop__filterShow {
+      display: none !important;
+    }
+    .shop__filterIcon {
+      display: none;
+    }
   }
 }

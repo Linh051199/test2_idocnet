@@ -17,6 +17,8 @@
 
   .shop__filter {
     display: flex;
+    flex-wrap: wrap;
+
     justify-content: space-between;
     width: 100%;
     padding: 55px 0;
@@ -29,8 +31,10 @@
     .shop__filterContainer {
       position: relative;
       display: flex;
+      flex-wrap: wrap;
       height: 100%;
       align-items: center;
+      justify-content: space-between;
     }
   }
 
@@ -204,5 +208,40 @@
   .shop__filterNavSeparate {
     border-bottom: 1px solid #ddd;
     margin: 45px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+}
+
+/* Tablet - PC with low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .shop__list {
+    .shop__item {
+      width: 49% !important;
+    }
+  }
+}
+/* Mobile */
+@media (max-width: 739px) {
+  .shop__list {
+    .shop__item {
+      width: 100% !important;
+    }
+  }
+  .shop__filterTitle {
+    display: none;
+  }
+
+  .shop__filterContainer {
+    width: 100%;
+    flex-direction: row-reverse;
+    .shop__filterShow {
+      display: none !important;
+    }
+    .shop__filterIcon {
+      display: none;
+    }
   }
 }
