@@ -39,6 +39,10 @@ function SofasProduct() {
   const data = location.state;
   console.log(data);
 
+  const cartProduct = { ...data, number: numberBook };
+
+  console.log("🚀 ~ cartProduct:", cartProduct);
+
   const controlHeader = () => {
     if (window.scrollY > 200) {
       setShow(true);
@@ -73,6 +77,10 @@ function SofasProduct() {
     setColorGray(false);
     setColorWood(true);
     setBtnBookActive(true);
+  };
+
+  const handleOnClickBuy = () => {
+    dispatch(actions.addCart(data));
   };
 
   return (
@@ -149,7 +157,12 @@ function SofasProduct() {
                 <span onClick={() => setNumberBook(numberBook + 1)}>+</span>
               </div>
               {btnBookActive ? (
-                <div className={cx("product__btnActive")}>buy now</div>
+                <div
+                  className={cx("product__btnActive")}
+                  onClick={handleOnClickBuy}
+                >
+                  buy now
+                </div>
               ) : (
                 <div className={cx("product__btn")}>buy now</div>
               )}

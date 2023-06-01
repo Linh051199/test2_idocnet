@@ -6,11 +6,15 @@ function Cart() {
   const [state, dispatch] = useContext(CartContext);
   const { cartList } = state;
 
+  const handleOnClick = () => {
+    dispatch(actions.addCart("1"));
+  };
+
   return (
     <div>
-      <button onClick={dispatch(actions.addCart("1"))}>Add</button>
+      <button onClick={handleOnClick}>Add</button>
       {cartList.map((cart, index) => (
-        <li key={index}>{cart}</li>
+        <li key={index}>{cart.name}</li>
       ))}
     </div>
   );
