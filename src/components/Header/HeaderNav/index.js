@@ -165,7 +165,7 @@ function HeaderNav() {
                     <div className={cx("header__menuBedImg")}>
                       <img
                         src="https://themes.muffingroup.com/be/furniturestore2/wp-content/uploads/2023/02/befurniturestore2-categories-pic1.webp"
-                        alt="image"
+                        alt="img"
                         width="400px"
                         height="100%"
                       />
@@ -439,7 +439,9 @@ function HeaderNav() {
         </div>
 
         <div className={cx("header__nav")}>
-          <div className={cx("header__navItem")}>Home</div>
+          <Link to={"/test2_idocnet/"}>
+            <div className={cx("header__navItem")}>Home</div>
+          </Link>
           <div className={cx("header__navItem", "navItemActive")}>Shop</div>
           <div className={cx("header__navItem")}>Blog</div>
           <div className={cx("header__navItem")}>Collections</div>
@@ -465,14 +467,41 @@ function HeaderNav() {
                 class="fa-solid fa-xmark"
                 onClick={handleOnClickCloseNavBtn}
               ></i>
-              <div className={cx("header__navResponsiveItem")}>Home</div>
+              <Link to={"/test2_idocnet/"}>
+                <div
+                  className={cx("header__navResponsiveItem")}
+                  onClick={() => setShowNavResponsive(false)}
+                >
+                  Home
+                </div>
+              </Link>
               <div className={cx("header__navResponsiveItem", "navItemActive")}>
                 Shop
               </div>
-              <div className={cx("header__navResponsiveItem")}>Blog</div>
-              <div className={cx("header__navResponsiveItem")}>Collections</div>
-              <div className={cx("header__navResponsiveItem")}>About us</div>
-              <div className={cx("header__navResponsiveItem")}>Contact</div>
+              <div
+                className={cx("header__navResponsiveItem")}
+                onClick={() => setShowNavResponsive(false)}
+              >
+                Blog
+              </div>
+              <div
+                className={cx("header__navResponsiveItem")}
+                onClick={() => setShowNavResponsive(false)}
+              >
+                Collections
+              </div>
+              <div
+                className={cx("header__navResponsiveItem")}
+                onClick={() => setShowNavResponsive(false)}
+              >
+                About us
+              </div>
+              <div
+                className={cx("header__navResponsiveItem")}
+                onClick={() => setShowNavResponsive(false)}
+              >
+                Contact
+              </div>
             </div>
           </div>
         )}
@@ -489,42 +518,68 @@ function HeaderNav() {
                 onClick={handleOnClickCloseNavBtn}
               ></i>
 
-              <div className={cx("header__categoriesResponsiveItem")}>
+              <div
+                className={cx("header__categoriesResponsiveItem")}
+                onClick={() => setShowCategoriesResponsive(false)}
+              >
                 <img src={images.chair} alt="img" />
                 <p>Chairs</p>
               </div>
 
-              <div className={cx("header__categoriesResponsiveItem")}>
+              <div
+                className={cx("header__categoriesResponsiveItem")}
+                onClick={() => setShowCategoriesResponsive(false)}
+              >
                 <img src={images.beds} alt="img" />
                 <p>Beds</p>
               </div>
 
-              <div className={cx("header__categoriesResponsiveItem")}>
+              <div
+                className={cx("header__categoriesResponsiveItem")}
+                onClick={() => setShowCategoriesResponsive(false)}
+              >
                 <img src={images.lamp} alt="img" />
                 <p>Lamps</p>
               </div>
 
-              <div className={cx("header__categoriesResponsiveItem")}>
+              <div
+                className={cx("header__categoriesResponsiveItem")}
+                onClick={() => setShowCategoriesResponsive(false)}
+              >
                 <img src={images.table} alt="img" />
                 <p>Tables</p>
               </div>
 
-              <div className={cx("header__categoriesResponsiveItem")}>
+              <div
+                className={cx("header__categoriesResponsiveItem")}
+                onClick={() => setShowCategoriesResponsive(false)}
+              >
                 <img src={images.armchair} alt="img" />
                 <p>ArmChairs</p>
               </div>
 
-              <div className={cx("header__categoriesResponsiveItem")}>
+              <div
+                className={cx("header__categoriesResponsiveItem")}
+                onClick={() => setShowCategoriesResponsive(false)}
+              >
                 <img src={images.cabines} alt="img" />
                 <p>Cabinets</p>
               </div>
 
-              <div className={cx("header__categoriesResponsiveItem")}>
-                <img src={images.sofas} alt="img" />
-                <p>Sofas</p>
-              </div>
+              <Link to={"/test2_idocnet/sofas"}>
+                <div
+                  className={cx("header__categoriesResponsiveItem")}
+                  onClick={() => setShowCategoriesResponsive(false)}
+                >
+                  <img src={images.sofas} alt="img" />
+                  <p>Sofas</p>
+                </div>
+              </Link>
 
-              <div className={cx("header__categoriesResponsiveItem")}>
+              <div
+                className={cx("header__categoriesResponsiveItem")}
+                onClick={() => setShowCategoriesResponsive(false)}
+              >
                 <img src={images.star} alt="img" />
                 <p className={cx("active")}>Sales</p>
               </div>

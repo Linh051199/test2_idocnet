@@ -21,37 +21,37 @@ function Footer() {
             <div className={cx("footer__contactInfo")}>
               <div className={cx("footer__contactInfoItem")}>
                 <p>Phone</p>
-                <a>+61 (0) 3 8376 6284</a>
+                <a href="/#">+61 (0) 3 8376 6284</a>
               </div>
               <div className={cx("footer__contactInfoItem")}>
                 <p>Mail</p>
-                <a>noreply@envato.com</a>
+                <a href="/#">noreply@envato.com</a>
               </div>
             </div>
           </div>
           <div className={cx("footer__infoList")}>
             <div className={cx("footer__info")}>
-              <a>- shop</a>
-              <a>- projects</a>
-              <a>- faq</a>
-              <a>- services</a>
-              <a>- about us</a>
-              <a>- contact</a>
+              <a href="/#">- shop</a>
+              <a href="/#">- projects</a>
+              <a href="/#">- faq</a>
+              <a href="/#">- services</a>
+              <a href="/#">- about us</a>
+              <a href="/#">- contact</a>
             </div>
             <div className={cx("footer__info")}>
-              <a>- chairs</a>
-              <a>- beds</a>
-              <a>- table</a>
-              <a>- sofas</a>
+              <a href="/#">- chairs</a>
+              <a href="/#">- beds</a>
+              <a href="/#">- table</a>
+              <a href="/#">- sofas</a>
             </div>
           </div>
         </div>
         <div className={cx("footer__author")}>
           <div className={cx("footer__authorLink")}>
             <div>
-              © 2023 Betheme by <a>Muffin group</a> | All Rights Reserved |
-              Powered by
-              <a> WordPress</a>
+              © 2023 Betheme by <a href="/#">Muffin group</a> | All Rights
+              Reserved | Powered by
+              <a href="/#"> WordPress</a>
             </div>
           </div>
           <div className={cx("footer__authorIcon")}>

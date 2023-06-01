@@ -109,7 +109,7 @@ function Sofas() {
                 360
               </p>
             </div>
-            <div className={cx("shop__filterIcon")}>2</div>
+
             <select className={cx("shop__filterSelect")}>
               <option>Default sorting</option>
               <option>Sort by popularity</option>

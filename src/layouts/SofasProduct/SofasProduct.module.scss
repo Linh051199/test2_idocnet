@@ -335,7 +335,7 @@
   position: sticky;
   position: -webkit-sticky;
   top: 170px;
-  max-height: 65vh;
+  max-height: 64vh;
   width: 40%;
 
   display: flex;
@@ -575,6 +575,7 @@
     font-size: var(--font-size30);
     font-weight: var(--font-weight-medium);
     margin-bottom: 20px;
+    text-align: left;
   }
 
   .product__feedBackBody {
@@ -857,10 +858,11 @@
     .product__moreInfoProductItem {
       h4 {
         font-size: var(--font-size14) !important;
-        width: 100px !important;
+        width: 80px !important;
       }
 
       p {
+        margin-left: 20px !important;
         font-size: var(--font-size12) !important;
       }
     }
@@ -922,5 +924,8 @@
         margin-right: 0 !important;
       }
     }
+  }
+  .product__feedBackHeader {
+    font-size: var(--font-size24) !important;
   }
 }

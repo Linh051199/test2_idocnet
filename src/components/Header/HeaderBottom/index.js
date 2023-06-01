@@ -10,6 +10,7 @@ const cx = classNames.bind(styles);
 function HeaderBottom() {
   const [showLoinForm, setShowLoinForm] = useState(false);
   const [showCart, setShowCart] = useState(false);
+  const [showSearchBox, setSearchBox] = useState(false);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [messErr, setMessErr] = useState({});
@@ -69,9 +70,11 @@ function HeaderBottom() {
           <div className={cx("headerBottom__contactItem", "searchIcon")}>
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          <div className={cx("headerBottom__contactItem")}>
-            <i className="fa-regular fa-heart"></i>
-          </div>
+          <Link to={"/test2_idocnet/cart"}>
+            <div className={cx("headerBottom__contactItem")}>
+              <i className="fa-regular fa-heart"></i>
+            </div>
+          </Link>
 
           <div
             className={cx("headerBottom__contactItem")}
@@ -170,6 +173,19 @@ function HeaderBottom() {
               </div>
             </div>
           </>
+        )}
+
+        {showSearchBox && (
+          <div className={cx("headerBottom__searchBox")}>
+            <div className={cx("headerBottom__overlay")}></div>
+            <div className={cx("headerBottom__searchBoxContainer")}>
+              <form>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Enter your search" />
+                <i class="fa-solid fa-xmark"></i>
+              </form>
+            </div>
+          </div>
         )}
       </div>
     </div>

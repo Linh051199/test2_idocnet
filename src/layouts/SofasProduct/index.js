@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import classNames from "classnames/bind";
 import { Rate } from "antd";
@@ -6,13 +6,14 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css"; // optional
 
 import styles from "./SofasProduct.module.scss";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import HeaderFixed from "../../components/Header/HeaderFixed";
 import images from "../../assets/images";
 import ShopItem from "../Shop/ShopItem";
 import SideBarAd from "../../components/SideBarAd";
+import { CartContext, actions } from "../../store";
 
 const cx = classNames.bind(styles);
 function SofasProduct() {
@@ -23,6 +24,10 @@ function SofasProduct() {
   const [colorGray, setColorGray] = useState(false);
   const [colorWood, setColorWood] = useState(false);
   const [btnBookActive, setBtnBookActive] = useState(false);
+
+  const [state, dispatch] = useContext(CartContext);
+  const { cartList } = state;
+  console.log("🚀 ~ cartList:", cartList);
 
   const handleOnClickSubtract = () => {
     if (numberBook > 1) {

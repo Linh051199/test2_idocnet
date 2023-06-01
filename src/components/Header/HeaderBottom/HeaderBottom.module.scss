@@ -392,6 +392,39 @@
   display: none;
 }
 
+.headerBottom__searchBox {
+  position: absolute;
+
+  .headerBottom__overlay {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .headerBottom__searchBoxContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 80%;
+    height: 62px;
+    background-color: #fff;
+
+    form {
+      i {
+        font-size: var(--font-size24);
+        color: var(--primaryColor);
+      }
+    }
+  }
+}
+
 /* Mobile */
 @media (max-width: 739px) {
   .headerBottom_wrapper {
