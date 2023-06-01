@@ -68,7 +68,7 @@ function HeaderBottom() {
         </div>
         <div className={cx("headerBottom__contact")}>
           <div className={cx("headerBottom__contactItem", "searchIcon")}>
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i className="fa-solid fa-magnifying-glass"></i>
           </div>
           <Link to={"/test2_idocnet/cart"}>
             <div className={cx("headerBottom__contactItem")}>
@@ -98,13 +98,13 @@ function HeaderBottom() {
             <div className={cx("headerBottom__formLoginHeader")}>
               <p>Login</p>
               <i
-                class="fa-solid fa-xmark"
+                className="fa-solid fa-xmark"
                 onClick={() => setShowLoinForm(false)}
               ></i>
             </div>
             <div className={cx("headerBottom__LoginForm")}>
               <form>
-                <i class="fa-solid fa-user"></i>
+                <i className="fa-solid fa-user"></i>
                 <input
                   type="text"
                   placeholder="Username or email*"
@@ -113,7 +113,7 @@ function HeaderBottom() {
               </form>
               <p>{messErr.userName}</p>
               <form>
-                <i class="fa-solid fa-lock"></i>
+                <i className="fa-solid fa-lock"></i>
                 <input
                   type="password"
                   placeholder="Password*"
@@ -147,7 +147,7 @@ function HeaderBottom() {
             <div className={cx("headerBottom__cart")}>
               <div className={cx("headerBottom__cartHeader")}>
                 <i
-                  class="fa-solid fa-xmark"
+                  className="fa-solid fa-xmark"
                   onClick={() => setShowCart(false)}
                 ></i>
                 <img src={images.buyBlack} alt="img" />
@@ -180,9 +180,9 @@ function HeaderBottom() {
             <div className={cx("headerBottom__overlay")}></div>
             <div className={cx("headerBottom__searchBoxContainer")}>
               <form>
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Enter your search" />
-                <i class="fa-solid fa-xmark"></i>
+                <i className="fa-solid fa-xmark"></i>
               </form>
             </div>
           </div>

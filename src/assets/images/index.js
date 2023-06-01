@@ -31,6 +31,7 @@ const images = {
   buyBlack: require("./buyBlack.svg").default,
   categories: require("./categories.svg").default,
   filter1: require("./filter1.svg").default,
+  buycart: require("./buycart.svg").default,
 };
 
 export default images;

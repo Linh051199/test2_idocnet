@@ -453,7 +453,7 @@ function HeaderNav() {
           className={cx("header__navResponsiveBtn")}
           onClick={() => setShowNavResponsive(true)}
         >
-          <i class="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars"></i>
         </div>
 
         {showNavResponsive && (
@@ -464,7 +464,7 @@ function HeaderNav() {
             ></div>
             <div className={cx("header__navResponsiveContainer")}>
               <i
-                class="fa-solid fa-xmark"
+                className="fa-solid fa-xmark"
                 onClick={handleOnClickCloseNavBtn}
               ></i>
               <Link to={"/test2_idocnet/"}>
@@ -514,7 +514,7 @@ function HeaderNav() {
             ></div>
             <div className={cx("header__categoriesResponsiveContainer")}>
               <i
-                class="fa-solid fa-xmark"
+                className="fa-solid fa-xmark"
                 onClick={handleOnClickCloseNavBtn}
               ></i>
 

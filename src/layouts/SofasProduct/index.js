@@ -16,6 +16,9 @@ import SideBarAd from "../../components/SideBarAd";
 import { CartContext, actions } from "../../store";
 
 const cx = classNames.bind(styles);
+
+// const color = ["white", "Gray", "Wood"];
+
 function SofasProduct() {
   const [show, setShow] = useState(false);
   const [showImage, setShowImage] = useState(false);
@@ -24,6 +27,8 @@ function SofasProduct() {
   const [colorGray, setColorGray] = useState(false);
   const [colorWood, setColorWood] = useState(false);
   const [btnBookActive, setBtnBookActive] = useState(false);
+  const [colorCurr, setColorCurr] = useState("");
+  console.log("🚀 ~ colorCurr:", colorCurr);
 
   const [state, dispatch] = useContext(CartContext);
   const { cartList } = state;
@@ -37,11 +42,8 @@ function SofasProduct() {
 
   const location = useLocation();
   const data = location.state;
-  console.log(data);
 
-  const cartProduct = { ...data, number: numberBook };
-
-  console.log("🚀 ~ cartProduct:", cartProduct);
+  const cartProduct = { ...data, number: numberBook, color: colorCurr };
 
   const controlHeader = () => {
     if (window.scrollY > 200) {
@@ -59,6 +61,7 @@ function SofasProduct() {
   }, []);
 
   const handleOnClickWhite = () => {
+    setColorCurr("white");
     setColorWhite(true);
     setColorGray(false);
     setColorWood(false);
@@ -66,6 +69,8 @@ function SofasProduct() {
   };
 
   const handleOnClickGray = () => {
+    setColorCurr("Gray");
+
     setColorWhite(false);
     setColorGray(true);
     setColorWood(false);
@@ -73,6 +78,8 @@ function SofasProduct() {
   };
 
   const handleOnClickWood = () => {
+    setColorCurr("Wood");
+
     setColorWhite(false);
     setColorGray(false);
     setColorWood(true);
@@ -80,7 +87,7 @@ function SofasProduct() {
   };
 
   const handleOnClickBuy = () => {
-    dispatch(actions.addCart(data));
+    dispatch(actions.addCart(cartProduct));
   };
 
   return (
@@ -426,7 +433,7 @@ function SofasProduct() {
         {showImage && (
           <div className={cx("showImageContainer")}>
             <i
-              class="fa-solid fa-xmark"
+              className="fa-solid fa-xmark"
               onClick={() => setShowImage(false)}
             ></i>
             <input type="checkbox" id="zoomCheck" hidden />
