@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test2_idocnet/static/css/main.b35fbf98.css",
-    "main.js": "/test2_idocnet/static/js/main.701de6ad.js",
+    "main.css": "/test2_idocnet/static/css/main.07539726.css",
+    "main.js": "/test2_idocnet/static/js/main.5f86b8c8.js",
     "static/js/787.28bbf581.chunk.js": "/test2_idocnet/static/js/787.28bbf581.chunk.js",
     "static/media/footerLogo.svg": "/test2_idocnet/static/media/footerLogo.8926f82a3601c96008ba5b4e34543ccc.svg",
     "static/media/Logo.svg": "/test2_idocnet/static/media/Logo.f64921535df17ed46b800e99f6e4cd77.svg",
@@ -31,17 +31,18 @@
     "static/media/Star.svg": "/test2_idocnet/static/media/Star.e349afc65ad605dc975d571d8818f848.svg",
     "static/media/freeShip.svg": "/test2_idocnet/static/media/freeShip.09e18681ddb6a777feb52f2763457ba5.svg",
     "static/media/Tag.svg": "/test2_idocnet/static/media/Tag.0279a556cddcb39ceb2309fe831af4fa.svg",
-    "static/media/filter1.svg": "/test2_idocnet/static/media/filter1.1145b42c82f84728ddbd0e7212355f9c.svg",
+    "static/media/filter1.svg": "/test2_idocnet/static/media/filter1.613738976fa93fc783b923b40e40422a.svg",
     "static/media/Air.svg": "/test2_idocnet/static/media/Air.fc5af58c414f7d7843223c4a5b33bfe2.svg",
     "static/media/User.svg": "/test2_idocnet/static/media/User.4d6e64ccc0540bf29d87843affa9952a.svg",
-    "static/media/buyBlack.svg": "/test2_idocnet/static/media/buyBlack.ad2a4b7c58a8dc98cf1a4ed0a58c3dc0.svg",
-    "static/media/buy.svg": "/test2_idocnet/static/media/buy.f222b19c818409635b0f475048b73ec9.svg",
-    "main.b35fbf98.css.map": "/test2_idocnet/static/css/main.b35fbf98.css.map",
-    "main.701de6ad.js.map": "/test2_idocnet/static/js/main.701de6ad.js.map",
+    "static/media/buyBlack.svg": "/test2_idocnet/static/media/buyBlack.5f73e9e3cac7c85809dd7b2d30253589.svg",
+    "static/media/buycart.svg": "/test2_idocnet/static/media/buycart.333f27638da194b33b35ad18048230fa.svg",
+    "static/media/buy.svg": "/test2_idocnet/static/media/buy.5e1f1657e2ce488ab0c0af1b153e4ca1.svg",
+    "main.07539726.css.map": "/test2_idocnet/static/css/main.07539726.css.map",
+    "main.5f86b8c8.js.map": "/test2_idocnet/static/js/main.5f86b8c8.js.map",
     "787.28bbf581.chunk.js.map": "/test2_idocnet/static/js/787.28bbf581.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b35fbf98.css",
-    "static/js/main.701de6ad.js"
+    "static/css/main.07539726.css",
+    "static/js/main.5f86b8c8.js"
   ]
 }
